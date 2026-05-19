@@ -80,7 +80,8 @@ without VC funding. Subscriptions pay for:
 - 7×24 uptime of horizonaai.dev + the marketplace
 - Security audits + signed releases
 
-Source code is visible under BSL-1.1 (and will convert to AGPL-3.0
-after the change date). You can audit every line; you can contribute;
-you can fork for non-commercial use. The paid tier exists so this
-project survives.
+Source code is visible under BSL-1.1 — free for personal, educational,
+and internal-evaluation use. You can audit every line, you can
+contribute, you can fork for non-commercial use. Commercial resale of
+Horizon itself needs a written licence agreement. The paid tier exists
+so this project survives.
