@@ -44,9 +44,9 @@ Three reasons:
 ## License & pricing
 
 Horizon ships under the **Business Source License 1.1** — source-available,
-free for personal evaluation, with a paid commercial tier and a 5-day
-trial for new users. After the change date the same source converts to
-AGPL-3.0.
+free for personal evaluation and internal use, with a paid commercial
+tier and a 5-day trial for new users. Commercial resale needs a written
+licence agreement.
 
 See [pricing](pricing.md) for the trial + subscription details.
 
