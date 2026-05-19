@@ -1,0 +1,22 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+These documentation pages (the contents of this repository) are
+licensed under CC BY-SA 4.0. You may quote, mirror, translate, and
+adapt them under the following terms:
+
+- ATTRIBUTION: You must credit "Horizon AI by Ernest Kostevich" with
+  a link to https://github.com/ErnestKostevich/horizon-genesis.
+- SHARE-ALIKE: If you remix or build upon the material, you must
+  distribute your contributions under the same license.
+
+Full license text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+---
+
+This license covers the DOCUMENTATION only.
+
+The Horizon AI software itself is © Ernest Kostevich and distributed
+separately under the Business Source License 1.1 (with planned
+conversion to AGPL-3.0). See the main repository for software terms:
+
+https://github.com/ErnestKostevich/horizon-genesis/blob/main/LICENSE
