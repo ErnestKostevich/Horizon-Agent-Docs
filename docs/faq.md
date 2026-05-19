@@ -24,12 +24,24 @@ on a different machine.
 
 ## Where is my conversation history stored?
 
-Same folder: `horizon_memory.json` (text), `horizon_embeddings.json`
-(vector index), `horizon_chats.json` (multi-chat).
+Same folder, hybrid layout — each layer serves a purpose:
+
+- `horizon_memory.json` — primary store, human-readable text. You can
+  open it in any editor.
+- `memory.sqlite` — SQLite + FTS5 mirror, rebuilt automatically on every
+  boot from the JSON file. Gives Horizon phrase, prefix, and proximity
+  queries on top of the JSON.
+- `horizon_embeddings.json` — 256-dim semantic vectors (OpenAI 3-small
+  or Gemini text-embedding) for "find by meaning, not keywords".
+- `horizon_chats.json` — multi-chat tabs.
 
 Nothing leaves your machine unless you explicitly send a message — at
 which point only that message goes to whatever AI provider you've
 chosen (and not to any Horizon server).
+
+If `better-sqlite3` didn't compile for your runtime (rare — only on very
+unusual platforms), Horizon falls back to JSON + an in-memory FTS index;
+no data is lost, search just becomes slightly less expressive.
 
 ## Can Horizon read all my files?
 

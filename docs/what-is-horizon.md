@@ -11,7 +11,7 @@ You bring the model (Claude, GPT, Gemini, Groq, or 21 other providers
 - A **terminal CLI + TUI** for power users who live in the shell
 - A **headless HTTP API** for cron jobs and remote machines
 - A **mobile PWA** companion that pairs with your desktop
-- **8 layers of memory** so it actually learns who you are
+- **8 layers of memory** — JSON file + SQLite + FTS5 + 256-dim embeddings hybrid — so it actually learns who you are
 - A **plugin marketplace** with crypto payouts for authors
 - **Real computer use** — Horizon can see your screen, click, type, take screenshots
 
