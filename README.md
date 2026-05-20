@@ -13,7 +13,12 @@
   <a href="https://horizonaai.dev"><img src="https://img.shields.io/badge/web-horizonaai.dev-ec4899?style=flat-square" alt="Website"/></a>
   <a href="https://horizonaai.dev/docs"><img src="https://img.shields.io/badge/hosted%20docs-online-06b6d4?style=flat-square" alt="Hosted docs"/></a>
   <a href="https://github.com/ErnestKostevich/horizon-genesis"><img src="https://img.shields.io/badge/source-horizon--genesis-8b5cf6?style=flat-square" alt="Source"/></a>
+  <a href="https://github.com/ErnestKostevich/horizon-genesis/releases"><img src="https://img.shields.io/github/v/release/ErnestKostevich/horizon-genesis?style=flat-square&color=f59e0b&label=latest" alt="Latest release"/></a>
 </p>
+
+> **First public release — v0.0.1** (May 2026). Docs follow the
+> shipping software; if something here doesn't match the binary you
+> downloaded, open an issue.
 
 ---
 
@@ -115,7 +120,7 @@ Or [download the desktop app](https://github.com/ErnestKostevich/horizon-genesis
 ## License
 
 Horizon AI is © Ernest Kostevich, distributed under the Business Source
-License 1.1 with planned conversion to AGPL-3.0.
+License 1.1 (source-visible, free for non-commercial + small-team use).
 
 These documentation pages themselves are licensed CC BY-SA 4.0 — you
 may quote, mirror, and translate them with attribution.
