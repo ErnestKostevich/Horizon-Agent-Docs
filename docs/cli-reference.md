@@ -1,7 +1,11 @@
 # CLI command reference
 
-53 unique subcommands across 5 groups. Run `horizon help` for the
-inline version.
+50+ subcommands across 8 groups. Run `horizon help` for the compact
+4-group default, or `horizon help --all` for the full surface.
+
+> **Looking for the complete list?** See the [full CLI commands page](reference/cli-commands.md)
+> — every subcommand grouped by category, including Sprint 7 additions
+> (`macro`, `ocr`, `find`, `agents board`, `theme`, `mobile`, `skill import`).
 
 ## Core
 
@@ -28,6 +32,7 @@ inline version.
 | `horizon skill show <id>` | Print SKILL.md |
 | `horizon skill new <id>` | Scaffold a new SKILL.md |
 | `horizon skill enable/disable <id>` | Toggle |
+| `horizon skill import <url\|path>` | Import skill from agentskills.io / ClawHub / GitHub / local path with security scan |
 
 ## Models & personas
 
@@ -113,7 +118,34 @@ inline version.
 | `horizon checkpoints save/list/restore` | Memory savepoints |
 | `horizon backup snapshot/list/restore/prune` | Full userData snapshots |
 | `horizon hooks list/add/test/remove` | Life-cycle shell hooks |
-| `horizon agents list/stop` | List/stop concurrent runs |
+| `horizon agents board` | Kanban board (queued / running / done) for spawned subagents |
+| `horizon agents list/show/cancel/purge/stats/reclaim` | Manage the durable SQLite queue |
+
+## Computer use (Sprint 7D)
+
+| Command | What it does |
+|---|---|
+| `horizon ocr <imagepath>` | Run Tesseract.js OCR on an image, print extracted text |
+| `horizon ocr screen` | OCR the active display |
+| `horizon find "<text>"` | OCR-find the first match on screen, print `(x,y) wxh conf` |
+| `horizon macro record <name>` | Record a sequence of mouse/keyboard events |
+| `horizon macro play <name> [--speed N] [--repeat N]` | Replay a saved macro |
+| `horizon macro list/show/delete` | Manage saved macros |
+| `horizon screen capture [--display N]` | Screenshot a specific display (multi-monitor) |
+| `horizon screen describe` | Screenshot + AI description |
+
+## Phone pairing
+
+| Command | What it does |
+|---|---|
+| `horizon mobile [--port N] [--host X]` | Spawns `horizon serve`, renders a QR code in the terminal — scan it with your phone camera to open the PWA with the pairing token pre-filled |
+
+## Theme
+
+| Command | What it does |
+|---|---|
+| `horizon theme [name]` | Switch CLI/TUI theme — `default`, `mono`, `light`, `kawaii`, `matrix`, `vapor`, `mocha`, or `cyber` |
+| `horizon theme --list` | Show all 8 built-in themes with previews |
 
 ## Utilities
 

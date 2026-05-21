@@ -1,11 +1,13 @@
 # First-time setup
 
 Whether you opened the desktop app or ran `horizon setup` in the
-terminal, the steps are the same.
+terminal, the steps are the same. The CLI also auto-launches the
+wizard the first time you run `horizon` with no provider keys
+configured.
 
 ## Step 1 — Pick a provider
 
-Horizon supports 25 direct providers + 300+ models through OpenRouter.
+Horizon supports 25 direct providers + 300+ models through LiteLLM.
 For your first day, recommend one of the **free-tier** options:
 
 | Provider | Free tier | Sign up |
@@ -34,20 +36,15 @@ Five built-in personalities:
 
 | Persona | Style |
 |---|---|
-| **Jarvis** | Formal, witty, says "sir" — JARVIS from Iron Man |
+| **Jarvis** | Formal, witty, says "Sir" — JARVIS from Iron Man |
 | **Friday** | Casual, energetic, modern slang |
 | **Alfred** | Calm, dignified, like a butler |
 | **Sage** | Academic, precise, methodical |
 | **Pixel** | Playful, expressive, lots of emoji |
 
-Each persona has its own:
-- System prompt + tone
-- Memory namespace (Jarvis remembers different things than Pixel)
-- Voice preset (if you enable text-to-speech)
-- Wake-word response ("Yes sir" for Jarvis, "Hey there!" for Pixel)
-
-You can also create [custom personas](personas.md) with your own
-system prompt and tool whitelist.
+Each persona has its own system prompt, memory namespace, voice preset,
+and wake-word response. Read [Personas](concepts/personas.md) for the
+full breakdown, including custom personas.
 
 ## Step 4 — Pick a language
 
@@ -64,11 +61,30 @@ morning, Alex").
 
 Try one of these:
 
-```
+```bash
+# Quick chat
 horizon chat "what's the weather in Vilnius?"
+
+# Full agent loop with tool use
 horizon "find every TODO in this project and group by file"
 horizon agent "draft a PR description from the last 3 commits" --auto-approve
-horizon                  # launch the interactive TUI
+
+# Interactive TUI
+horizon
+
+# Switch themes mid-session
+horizon theme kawaii
+horizon theme matrix
+
+# Pair your phone (QR code + local server, one command)
+horizon mobile
+
+# OCR text out of any window
+horizon screen capture --out cap.png
+horizon ocr cap.png
+
+# Find a button on screen and click it
+horizon find "Submit"
 ```
 
 Or in the desktop app — just type into the chat composer.
@@ -77,12 +93,19 @@ Or in the desktop app — just type into the chat composer.
 
 - [Choosing a model provider](providers.md) — full price + capability table
 - [Agent mode](agent-mode.md) — when to use Chat vs Agent
-- [Voice & wake word](voice.md) — say "Horizon" to start
-- [All 50+ CLI commands](cli-reference.md)
+- [Computer use](guides/computer-use.md) — screen, mouse, keyboard
+- [Computer use advanced](guides/computer-use-advanced.md) — OCR + macros + multi-display
+- [Voice & wake word](guides/voice-and-wake-word.md) — say "Horizon" to start
+- [Durable agents](guides/durable-agents.md) — Kanban board + subagents
+- [Full CLI commands](reference/cli-commands.md)
 
 ## Switching providers later
 
-`horizon model claude --model claude-sonnet-4-6` or in the desktop:
-Settings → Models → pick a different provider. You can even use
-`--provider auto` to let Horizon pick the cheapest available provider
-on each call.
+```bash
+horizon model claude --model claude-sonnet-4-6
+horizon model --list
+```
+
+Or in the desktop: Settings → Models → pick a different provider. You
+can also use `--provider auto` per-call to let Horizon pick the
+cheapest available provider on each request.

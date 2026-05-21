@@ -50,12 +50,12 @@ adapters enabled:
 horizon serve \
   --port 18789 \
   --token $HORIZON_TOKEN \
-  --enable-telegram \
+  --enable-tg \
   --enable-discord \
-  --enable-email
+  --enable-whatsapp
 ```
 
-Now your Telegram bot, Discord bot, and email account all answer 24/7
+Now your Telegram bot, Discord bot, and WhatsApp number all answer 24/7
 even when your laptop is asleep. The agent's memory lives on the VPS —
 you can `scp` the JSON file home periodically if you want a local backup.
 
@@ -90,14 +90,16 @@ coding, browsing, etc.
 ## Channel adapter flags
 
 ```
---enable-telegram     # uses k_telegram_bot from your keys store
+--enable-tg           # uses k_telegram_bot from your keys store
 --enable-discord      # uses k_discord_bot
---enable-slack        # uses k_slack
 --enable-whatsapp     # uses Twilio SID/token in settings
 --enable-signal       # uses signal-cli bridge URL in settings
---enable-email        # uses email.imap.* + email.smtp.* settings
 --enable-imessage     # macOS only — needs Messages.app automation perm
 ```
+
+Slack arrives through the connector + tool layer (`horizon connect slack`)
+rather than as a long-running adapter. Email automations are scheduled
+via `horizon cron` + the IMAP/SMTP tools.
 
 You can omit `--token` for localhost-only; the server picks a random
 one and prints it once on startup.

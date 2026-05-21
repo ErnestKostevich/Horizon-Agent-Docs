@@ -25,7 +25,7 @@
 ## Get started in 60 seconds
 
 ```bash
-# macOS / Linux
+# macOS / Linux — single binary, no Node required
 curl -L https://github.com/ErnestKostevich/horizon-genesis/releases/latest/download/horizon-linux-x64 -o horizon
 chmod +x horizon
 ./horizon setup
@@ -37,7 +37,7 @@ iwr https://github.com/ErnestKostevich/horizon-genesis/releases/latest/download/
 .\horizon.exe setup
 ```
 
-Or [download the desktop app](https://github.com/ErnestKostevich/horizon-genesis/releases/latest) — installers for Windows / macOS / Linux.
+Or [download the desktop app](https://github.com/ErnestKostevich/horizon-genesis/releases/latest) — installers for Windows / macOS / Linux. Package-manager users: see [install via npm / brew / scoop](docs/guides/install-via-package-manager.md).
 
 ## Table of contents
 
@@ -45,70 +45,57 @@ Or [download the desktop app](https://github.com/ErnestKostevich/horizon-genesis
 
 - [What is Horizon?](docs/what-is-horizon.md)
 - [Installation](docs/installation.md)
+- [Install via npm / brew / scoop](docs/guides/install-via-package-manager.md)
 - [First-time setup](docs/getting-started.md)
 - [Choosing a model provider](docs/providers.md)
 
-### Desktop app
+### Concepts
 
-- [The chat interface](docs/desktop-chat.md)
+- [9-layer memory architecture](docs/concepts/9-layer-memory.md)
+- [Personas — five built-in voices](docs/concepts/personas.md)
+
+### Desktop app & agent
+
 - [Agent mode](docs/agent-mode.md)
-- [Voice & wake word](docs/voice.md)
-- [Computer use (screen / mouse / keyboard)](docs/computer-use.md)
-- [Personas](docs/personas.md)
+- [Computer use — screen, mouse, keyboard](docs/guides/computer-use.md)
+- [Computer use — advanced (OCR, multi-display, macros)](docs/guides/computer-use-advanced.md)
+- [Durable agents — Kanban board + subagents](docs/guides/durable-agents.md)
+- [Voice & wake word](docs/guides/voice-and-wake-word.md)
 
 ### Terminal CLI
 
-- [CLI overview](docs/cli.md)
-- [All 50+ commands](docs/cli-reference.md)
-- [TUI — interactive shell](docs/tui.md)
-- [Shell completion](docs/cli-completion.md)
-- [Profiles (multiple environments)](docs/cli-profiles.md)
+- [CLI reference (legacy table)](docs/cli-reference.md)
+- [Full CLI commands — every subcommand grouped by category](docs/reference/cli-commands.md)
+- [CLI themes — 8 built-in palettes](docs/guides/cli-themes.md)
 
-### Memory & skills
+### Memory & models
 
-- [How Horizon remembers](docs/memory.md)
-- [Workspace memory (`.horizon/`)](docs/workspace-memory.md)
-- [Skills system](docs/skills.md)
-- [Writing custom skills](docs/skills-custom.md)
+- [9-layer memory architecture](docs/concepts/9-layer-memory.md)
+- [Local models — Ollama / LM Studio / LocalAI](docs/guides/local-models.md)
+- [All 25 AI providers — full reference](docs/reference/providers-full.md)
 
-### Connections (messaging + tools)
+### Channels & integrations
 
-- [Telegram bot setup](docs/connect-telegram.md)
-- [Discord bot setup](docs/connect-discord.md)
+- [Telegram bot setup](docs/guides/channels/telegram.md)
+- [Discord bot setup](docs/guides/channels/discord.md)
 - [WhatsApp via Twilio](docs/connect-whatsapp.md)
-- [Signal via self-hosted bridge](docs/connect-signal.md)
-- [iMessage (macOS)](docs/connect-imessage.md)
-- [Slack / Notion / Linear / GitHub](docs/connect-tools.md)
-
-### Cost & providers
-
-- [Cost tracking — `horizon cost`](docs/cost.md)
-- [Smart auto routing — `--provider auto`](docs/auto-routing.md)
-- [All 25 AI providers](docs/providers-full.md)
-- [LiteLLM router (300+ models)](docs/litellm.md)
-- [Running locally with Ollama](docs/local-models.md)
 
 ### Server / advanced
 
-- [Running on a VPS](docs/deploy.md)
-- [Headless HTTP API](docs/http-api.md)
-- [Mobile PWA companion](docs/mobile-pwa.md)
-- [Cron scheduling](docs/cron.md)
-- [Sandbox backends (SSH / Modal / Daytona)](docs/sandbox.md)
+- [Server mode — run as a 24/7 bot](docs/server-mode.md)
+- [HTTP API reference](docs/reference/http-api.md)
 
-### Plugins & marketplace
+### Plugins
 
+- [Plugin development — intro to the SDK](docs/guides/plugin-development.md)
 - [Browse the marketplace](https://horizonaai.dev/browse)
-- [Installing plugins](docs/plugins-install.md)
-- [Building plugins (developer guide)](https://github.com/ErnestKostevich/horizon-plugin-sdk)
-- [Publishing & getting paid](docs/plugins-publish.md)
+- [Plugin SDK on GitHub](https://github.com/ErnestKostevich/horizon-plugin-sdk)
 
 ### Help
 
 - [FAQ](docs/faq.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Pricing](docs/pricing.md)
-- [Privacy & data](docs/privacy.md)
 - [Contact support](docs/support.md)
 
 ## Stay updated

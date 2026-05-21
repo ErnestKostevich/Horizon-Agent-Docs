@@ -1,6 +1,8 @@
 # Installation
 
-Three ways to run Horizon — pick the one that fits your workflow.
+Three ways to run Horizon — pick the one that fits your workflow. If
+you want package-manager installs (npm, Homebrew, Scoop), see the
+dedicated [install via package manager](guides/install-via-package-manager.md) page.
 
 ## Option 1 — Desktop app (recommended for most users)
 
@@ -51,9 +53,28 @@ horizon chat "what's 2+2?"       # quick chat
 horizon serve --port 18789       # headless HTTP API for mobile/cron
 ```
 
-See the [full CLI reference](cli-reference.md) for all 50+ commands.
+See the [full CLI command reference](reference/cli-commands.md) for all 50+ commands.
 
-## Option 3 — From source
+## Option 3 — Package managers
+
+If you prefer your distro's package manager:
+
+```bash
+# npm (cross-platform, requires Node 22+)
+npm install -g @horizonai/cli
+
+# Homebrew (macOS / Linux)
+brew install ernestkostevich/horizon/horizon
+
+# Scoop (Windows)
+scoop bucket add horizon https://github.com/ErnestKostevich/scoop-horizon
+scoop install horizon
+```
+
+See [install via package manager](guides/install-via-package-manager.md) for the
+full walk-through (taps, buckets, autocomplete setup, troubleshooting).
+
+## Option 4 — From source
 
 If you want to read the code, contribute, or build a custom version.
 
@@ -103,8 +124,12 @@ explicit action.
   delete the data folder listed above.
 - **CLI binary**: `rm /usr/local/bin/horizon` (or whatever path you
   picked) + delete the data folder.
+- **npm install**: `npm uninstall -g @horizonai/cli`
+- **brew install**: `brew uninstall horizon`
+- **scoop install**: `scoop uninstall horizon`
 
 ## Next
 
 - [First-time setup wizard](getting-started.md)
 - [Pick a model provider](providers.md)
+- [Full CLI commands](reference/cli-commands.md)

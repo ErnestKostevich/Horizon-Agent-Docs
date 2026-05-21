@@ -39,7 +39,7 @@ cerebras · sambanova · moonshot · zai · nebius · azure · custom ·
 ollama · lmstudio · localai · litellm
 
 For the full provider list with default models + cost per million
-tokens, see [providers-full.md](providers-full.md).
+tokens, see the [full providers reference](reference/providers-full.md).
 
 ## Smart routing
 
@@ -54,7 +54,14 @@ Don't want to decide? Use `--provider auto`. Horizon walks this order:
 First match with a configured key wins. Set Claude as the only key →
 auto falls through to Claude. Add Gemini → auto uses Gemini for free.
 
-See [auto-routing](auto-routing.md) for the full algorithm.
+First match with a configured key wins. Set Claude as the only key →
+auto falls through to Claude. Add Gemini → auto uses Gemini for free.
+
+## Local models
+
+For zero-API-spend setups, Horizon ships first-class support for
+Ollama, LM Studio, and LocalAI. See [local models](guides/local-models.md)
+for setup, recommended models, and GPU tuning.
 
 ## Switching mid-conversation
 
