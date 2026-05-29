@@ -16,9 +16,10 @@
   <a href="https://github.com/ErnestKostevich/horizon-genesis/releases"><img src="https://img.shields.io/github/v/release/ErnestKostevich/horizon-genesis?style=flat-square&color=f59e0b&label=latest" alt="Latest release"/></a>
 </p>
 
-> **First public release — v0.0.1** (May 2026). Docs follow the
-> shipping software; if something here doesn't match the binary you
-> downloaded, open an issue.
+> **Latest release — v0.0.2** (May 2026) — the agent that finishes the
+> job: self-correcting reflection loop, memory that learns what helps,
+> semantic skill matching. Docs follow the shipping software; if
+> something here doesn't match the binary you downloaded, open an issue.
 
 ---
 

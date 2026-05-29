@@ -78,7 +78,7 @@ curl -H "Authorization: Bearer $T" http://127.0.0.1:18789/api/version
 
 ```json
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "horizon-genesis",
   "nodeVersion": "v22.10.0",
   "platform": "linux",
@@ -107,7 +107,7 @@ without nested reads. The PWA polls this for the green / red dot.
   "memoryCount": 187,
   "factCount": 24,
   "skillsCount": 11,
-  "serverVersion": "0.0.1",
+  "serverVersion": "0.0.2",
   "nodeVersion": "v22.10.0",
   "platform": "linux",
   "ts": 1747765800000
